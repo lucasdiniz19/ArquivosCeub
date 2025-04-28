@@ -1,0 +1,22 @@
+# Ignorar pastas do sistema do Windows
+Desktop/
+Documents/
+Downloads/
+Favorites/
+Links/
+Music/
+OneDrive/
+Pictures/
+Saved Games/
+Searches/
+Videos/
+
+# Ignorar arquivos de configuração do sistema
+*.log
+*.ini
+*.bak
+*.swp
+
+# Ignorar arquivos de usuário
+ntuser.dat*
+
