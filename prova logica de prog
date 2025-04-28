@@ -1,0 +1,98 @@
+### INSTRUÇÕES
+
+ - Fazer os exercícios em um arquivo notebook (de extensão *.ipynb)  
+ - Exercícios que pedem entrada de usuário deverão ter valores fixados. Exemplo:  
+    num = 6 #int(input('Digite um número inteiro')
+ - As questões deverão ser respondidas em ordem
+ - Todas as questões deverão ter uma explicação breve de como você pensou na solução
+ - Cópias de soluções zerarão a questão dos dois fraudadores
+ - Cópias de outros lugares zerarão a questão.
+ - Uso de recursos não vistos em aula zerarão a questão.
+ - Colocar seu nome, curso e dia da semana no início do notebook
+
+### Dados
+Nome:  joao lucas  diniz  
+-------------------------------------
+
+Curso:  ciencia da computaçao
+------------------------------------
+
+Dia da semana:  segunda 28/04/2025
+-------------------------------------------------------------------------------------
+
+1)	Faça um programa que peça o ano de nascimento e mostra a idade do usuário no fim de 2025 e o ano que esse usuário fez ou fará 50 anos.------
+
+ano_nascimento = int(input("Digite o ano de nascimento: "))
+idade_em_2025 = 2025 - ano_nascimento
+ano_50_anos = ano_nascimento + 50
+print("Idade em 2025:", idade_em_2025)
+print("Ano fará 50 anos:", ano_50_anos)
+#o codigo pede ao usuario para escrever a data de nacimento usando o input
+#idade em 2025 é calculada subitraindo 2025(o ano que nos estamos )- o ano que ele nasceu
+#quando ele tera 50 anos é so pegar o ano que ele nasceu e adicionar + 50 anos
+#os prints sao para informar o resultado do programa.
+2)	 Faça um programa que peça números inteiros ao usuário e conta quantos números positivos e quantos números negativos foram digitados. O programa deverá parar quando o número zero for digitado, mostrando na tela os resultados. Além disso, o programa deverá informar se há mais números positivos, mais números negativos ou se há a mesma quantidade.
+
+positivos = 0
+negativos = 0
+while True:
+  numero = int(input("escreva um número inteiro e digite 0 para parar: "))
+  if numero == 0:
+    break
+  elif numero > 0:
+    positivos += 1
+  else:
+    negativos += 1
+if positivos > negativos:
+  print("tem  mais números positivos que negativos .")
+elif negativos > positivos:
+  print("tem  mais números negativos que positivos.")
+else:
+  print("tem a mesma quantidade de números positivos e negativos.")
+  #as variaveis sao iniciadas com 0 para armazenar os numeros positivos e negativos
+  #o while vai pedindo varios numeros inteiros ate ele digitar o 0 e para de pedir
+  #if é para se tiver o numero 0 ele para( break), caso contrario, ele continua pedindo
+  #depouis faz a comparaçao entre eles e faz um print com o resultado da comparaçao
+
+3) 	Faça um programa que converta a temperatura de graus Celsius para graus Farenheit ou vice-versa. O programa deverá perguntar se a temperatura de entrada está em Celsius ou Farenheit e mostrar a temperatura digitada convertida para a outra unidade. Fórmulas úteis:  $$C=\frac{5(F-32)}{9}$$,   $$F=\frac{9C}{5}+32$$.
+
+temperatura = float(input("digite a temperatura:"))
+unidade = input("a temperatura está em Celsius ou Fahrenheit?  ").upper()
+if unidade == "CELSIUS":
+    temperatura_fahrenheit = (9 * temperatura) / 5 + 32
+    print("A temperatura em Fahrenheit é:", temperatura_fahrenheit)
+elif unidade == "FAHRENHEIT":
+    temperatura_celsius = 5 * (temperatura - 32) / 9
+    print("A temperatura em Celsius é:", temperatura_celsius)
+else:
+    print("Unidade de temperatura inválida.Use  apenas Celsius ou  Fahrenheit.")
+   #ele pede a temperatura e pergunta em qual unidade ela esta,usa a formula para converter de uma temperatura para a outra
+   # usando if,elif e else, se for em celsius ele usa a primeira formula,caso contrario ele usa a segunda formula
+  # e else caso a pessoa nao digite celsius ou  Fahrenheit
+
+4) 	Faça um programa que, dado um número n maior que 5, mostra a primeira letra do seu nome feita com n linhas contendo a letra x. Esse programa deverá ter, no máximo, 4 laços de repetição.
+Exemplo: n = 6 (letra A):  
+
+
+```
+Digite um número maior que 5: 6
+      x     
+     x x    
+    x   x   
+   xxxxxxx  
+  x       x
+ x         x
+```
+
+n = int(input("Digite um número maior que 5: "))
+if n > 5:
+    for i in range(1):
+        print(" " * (n - 2) + "xxxxxxx")
+    for i in range(n - 2):
+        print(" " * (n - 2) + "  x")
+    print(" " * (n - 4) + "x" + " " * 2 + "x")
+else:
+    print("o seu numero e' menor que 5, digite um número maior que 5.")
+    #ele pede para digitar um numero maior que 5 para seguir com o projeto,caso a pessoa digite um numero <5,ele cai no else e pede para a pessoa digitar outro numero que seja maior q 5
+    #(if) ele segue e vai escrever a letra, no primeiro for ele faz a parte de cima, no segundo ele faz o corpo do j e a curvatura sao utilizados os dois prints abaixo do segundo for
+    # todos sendo mutiplicados pelo  N digitado para mudar o tamanho da letra
