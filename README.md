@@ -1,4 +1,4 @@
-ola, eu sou o joao luca
+ola, eu sou o joao lucas
 --------------
 tenho 19 Anos
 ------------------
